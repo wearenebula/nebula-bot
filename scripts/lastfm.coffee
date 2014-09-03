@@ -25,7 +25,7 @@ module.exports = (robot) ->
                     msg.send "There was a problem: #{err.message}"
                 else
                     data = JSON.parse body
-                    unless parseInt(data.recenttracks.total) > 0
+                    unless data.recenttracks.track
                         return msg.send """
                         Unable to find tracks for that user -
                         have they played anything? are they a user? Who knows"""
